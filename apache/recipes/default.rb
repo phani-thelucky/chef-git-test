@@ -6,13 +6,20 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-package "apache2"
 
-service "apache2"  do
+
+package "package"
+
+service "servie"  do
 	action [:enable, :start]
 end
 
-cookbook_file "/var/www/index.html" do
-	source "index.html"
+#cookbook_file "/var/www/index.html" do
+#	source "index.html"
+#	mode "0644"
+#end
+
+template "#{document}/index.html" do
+	source "index.html.erb"
 	mode "0644"
 end
