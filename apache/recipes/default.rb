@@ -7,11 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-document = "/var/www/html"
 
-package "apache2"
+package "package"
 
-service "apache2"  do
+service "servie"  do
 	action [:enable, :start]
 end
 
